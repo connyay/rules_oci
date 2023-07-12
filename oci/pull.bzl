@@ -102,7 +102,7 @@ def oci_pull(name, image = None, repository = None, registry = None, platforms =
     else:
         scheme = None
 
-    if digest and tag:
+    if reproducible and digest and tag:
         # Users might wish to leave tag=latest as "documentation" however if we just ignore tag
         # then it's never checked which means the documentation can be wrong.
         # For now just forbit having both, it's a non-breaking change to allow it later.
